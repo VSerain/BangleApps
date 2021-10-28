@@ -4101,5 +4101,20 @@
       {"name":"gpstouch.app.js","url":"gpstouch.app.js"},
       {"name":"gpstouch.img","url":"gpstouch.icon.js","evaluate":true}
     ]
+  },
+  {
+    "id": "simplyclock",
+    "name": "Simply Clock",
+    "version": "0.01",
+    "description": "Just simply clock",
+    "icon": "icon.png",
+    "type": "clock",
+    "tags": "clock",
+    "allow_emulator": true,
+    "supports": ["BANGLEJS"],
+    "storage": [
+      {"name":"simplyclock.app.js","url":"app.js"},
+      {"name":"simplyclock.img","url":"icon.js","evaluate":true}
+    ]
   }
 ]
