@@ -16,7 +16,7 @@ function main() {
 
         g.setFont("7x11Numeric7Seg",size).setFontAlign(1,-1);
         if ((d.getMinutes() == 0 && d.getSeconds() == 0) || forceDraw) {
-        g.clearRect(x - size * 9, y, x - size , y + size * 11);
+        g.clearRect(x - size * 14, y, x - size , y + size * 11);
         g.drawString(d.getHours(), x, y);
         }
 
