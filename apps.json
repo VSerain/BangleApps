@@ -5066,6 +5066,7 @@
   {
     "id": "omgbc",
     "name": "Oh My Gadget Bridge Core",
+    "icon": "omgbc.png",
     "version": "0.01",
     "description": "A custom implementation of gadget bridge, expose an API for other app",
     "type": "bootloader",
