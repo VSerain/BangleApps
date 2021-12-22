@@ -5072,6 +5072,7 @@
     "type": "bootloader",
     "tags": "tools, system",
     "supports": ["BANGLEJS"],
+    "readme": "README.md",
     "storage": [
       {"name":"customgadgetbridge.boot.js","url":"boot.js"},
       {"name":"customgadgetbridge.img","url":"icon.js","evaluate":true}
