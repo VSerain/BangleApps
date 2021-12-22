@@ -5064,18 +5064,33 @@
     ]
   },
   {
-    "id": "cgb",
-    "name": "Custom Gadget Bridge",
+    "id": "omgbc",
+    "name": "Oh My Gadget Bridge Core",
     "version": "0.01",
-    "description": "A custom implementation of gadget bridge",
-    "icon": "customgadgetbridge.png",
+    "description": "A custom implementation of gadget bridge, expose an API for other app",
     "type": "bootloader",
     "tags": "tools, system",
     "supports": ["BANGLEJS"],
     "readme": "README.md",
     "storage": [
-      {"name":"customgadgetbridge.boot.js","url":"boot.js"},
-      {"name":"customgadgetbridge.img","url":"icon.js","evaluate":true}
+      {"name":"omgbc.boot.js","url":"boot.js"},
+      {"name":"omgbc.img","url":"icon.js","evaluate":true}
+    ]
+  },
+  {
+    "id": "omgbhbf",
+    "name": "Oh My Gadget Bridge (Health, Battery, Find)",
+    "version": "0.01",
+    "description": "Implement Health, Battery, Find",
+    "icon": "omgbhbf.png",
+    "type": "bootloader",
+    "tags": "tools, system",
+    "supports": ["BANGLEJS"],
+    "dependencies": {"omgbc":"app"},
+    "readme": "README.md",
+    "storage": [
+      {"name":"omgbhbf.boot.js","url":"boot.js"},
+      {"name":"omgbhbf.img","url":"icon.js","evaluate":true}
     ]
   }
 ]

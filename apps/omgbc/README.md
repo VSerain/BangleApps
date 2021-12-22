@@ -1,4 +1,4 @@
-# Custom Gadget Bridge
+# Oh My Gadget Bridge Core
 
 Manage event of gadget bridge (alternative to Android bangle app).
 Dispatch many event in bangle and another app can listen here events
@@ -12,7 +12,7 @@ Dispatch many event in bangle and another app can listen here events
     "shortName": "app",
     "version": "0.01",
     "description": "bip bip",
-    "dependencies": { "cgb": "app" },
+    "dependencies": { "omgbc": "app" },
 }
 
 // myapp/app.js
@@ -51,11 +51,6 @@ List of events:
 - call
 - connect
 - disconnect
-
-### Default Features
- - Send Health tracking to GadgetBridge
- - Send Battery status to GadgetBridge
- - Vibration on find event (It can be disabled, see stop propagations part)
 
 ## Exemples
 
