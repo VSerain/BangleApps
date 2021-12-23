@@ -5094,7 +5094,20 @@
       {"name":"omgbhbf.boot.js","url":"boot.js"},
       {"name":"omgbhbf.img","url":"icon.js","evaluate":true},
       {"name":"omgbhbf.settings.js","url":"settings.js"}
-
+    ]},
+    {
+    "id": "simplyclock",
+    "name": "Simply Clock",
+    "version": "1.01",
+    "description": "Just simply clock",
+    "icon": "icon.png",
+    "type": "clock",
+    "tags": "clock",
+    "allow_emulator": true,
+    "supports": ["BANGLEJS"],
+    "storage": [
+      {"name":"simplyclock.app.js","url":"app.js"},
+      {"name":"simplyclock.img","url":"icon.js","evaluate":true}
     ]
   }
 ]
