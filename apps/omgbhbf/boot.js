@@ -2,9 +2,10 @@
     function boot() {
         // Battery monitor
         function sendBattery() { 
-            global.GadgetBridge.send({ t: "status", bat: E.getBattery() });
+            global.GadgetBridge.send({ t: "status", bat: E.getBattery(), volt: E.getAnalogVRef(), chg: Bangle.isCharging() });
         }
         setInterval(sendBattery, 10*60*1000);
+
         global.GadgetBridge.onEvent("connect", () => setTimeout(sendBattery, 2000), { layer: 0 });
         
         // Health tracking

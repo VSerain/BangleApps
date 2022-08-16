@@ -184,7 +184,7 @@ function listenEvent() {
 }
 
 function togglePlay() {
-    stat = (stat==="play" ? "pause" : "play");
+    stat = ( stat === "play" ? "pause" : "play");
 }
 
 function setAction(action) {
@@ -192,7 +192,7 @@ function setAction(action) {
     actionTimeout = setTimeout(() => lastAction = null, 1000);
     lastAction = action;
 
-    Bluetooth.println(JSON.stringify({t:"music", n: action}));
+    global.GadgetBridge.musicControl(action);
     draw();
 }
 

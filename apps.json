@@ -5067,7 +5067,7 @@
     "id": "omgbc",
     "name": "Oh My Gadget Bridge Core",
     "icon": "omgbc.png",
-    "version": "0.01",
+    "version": "0.02",
     "description": "A custom implementation of gadget bridge, expose an API for other app",
     "type": "bootloader",
     "tags": "tools, system",
@@ -5082,7 +5082,7 @@
   {
     "id": "omgbhbf",
     "name": "Oh My Gadget Bridge (Health, Battery, Find)",
-    "version": "0.01",
+    "version": "0.02",
     "description": "Implement Health, Battery, Find",
     "icon": "omgbhbf.png",
     "type": "bootloader",
@@ -5094,8 +5094,9 @@
       {"name":"omgbhbf.boot.js","url":"boot.js"},
       {"name":"omgbhbf.img","url":"icon.js","evaluate":true},
       {"name":"omgbhbf.settings.js","url":"settings.js"}
-    ]},
-    {
+    ]
+  },
+  {
     "id": "simplyclock",
     "name": "Simply Clock",
     "version": "1.01",
@@ -5105,9 +5106,26 @@
     "tags": "clock",
     "allow_emulator": true,
     "supports": ["BANGLEJS"],
+    "dependencies": {"omgbc":"app"},
     "storage": [
       {"name":"simplyclock.app.js","url":"app.js"},
       {"name":"simplyclock.img","url":"icon.js","evaluate":true}
+    ]
+  },
+  {
+    "id": "swipeclock",
+    "name": "Swipe Clock",
+    "version": "1.00",
+    "description": "Swipe clock",
+    "icon": "icon.png",
+    "type": "clock",
+    "tags": "clock",
+    "allow_emulator": true,
+    "supports": ["BANGLEJS"],
+    "dependencies": {"omgbc":"app"},
+    "storage": [
+      {"name":"swipeclock.app.js","url":"app.js"},
+      {"name":"swipeclock.img","url":"icon.js","evaluate":true}
     ]
   }
 ]

@@ -43,11 +43,11 @@
         },
         musicControl: cmd => {
             // play/pause/next/previous/volumeup/volumedown
-            global.GadgetBridge.send({ t: "music", n:cmd });
+            global.GadgetBridge.send({ t: "music", n: cmd });
         },
         messageResponse: (msg, response) => {
             if (!isFinite(msg.id)) return;
-            global.GadgetBridge.send({ t: "notify", n:response ? "OPEN" : "DISMISS", id: msg.id });
+            global.GadgetBridge.send({ t: "notify", n: response ? "OPEN" : "DISMISS", id: msg.id });
         },
 
         findPhone: (search) => {
@@ -60,11 +60,18 @@
         },
         "__private__" : { // Just for debbuging in WebIde
             dispatchEvent: dispatchEvent
-        }
+        },
+        isConnected: false,
     };
 
-    NRF.on("connect", () => dispatchEvent("connect", {}));
-    NRF.on("disconnect", () => dispatchEvent("disconnect", {}));
+    NRF.on("connect", () => {
+      GadgetBridge.isConnected = true;
+      dispatchEvent("connect", {})
+    });
+    NRF.on("disconnect", () => {
+      GadgetBridge.isConnected = false;
+      dispatchEvent("disconnect", {})
+    });
 
     var HANDLERS = {
         // {t:"notify",id:int, src,title,subject,body,sender,tel:string} add
